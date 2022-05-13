@@ -9,23 +9,30 @@ btnEnv.addEventListener("click", () => {
   let tercernúmero: number = Number(dato3.value);
   let suma: number = primernúmero + segundonúmero;
   let resta: number = primernúmero - segundonúmero;
-
+  function dibujarGuiones(n: number) {
+    let i: number;
+    let linea: string = "-";
+    for (i = 0; i <= n; i++) {
+      linea = linea + "-";
+    }
+    console.log(linea);
+  }
   switch (tercernúmero) {
     case 1:
-      console.log("----------------------------------------");
+      dibujarGuiones(40);
       console.log("El resultado de la operación es: ", suma);
-      console.log("----------------------------------------");
+      dibujarGuiones(40);
       break;
 
     case 2:
-      console.log("----------------------------------------");
+      dibujarGuiones(20);
       console.log("El resultado de la operación es: ", resta);
-      console.log("----------------------------------------");
+      dibujarGuiones(20);
       break;
 
     default:
-      console.log("----------------------------------------");
+      dibujarGuiones(10);
       console.log("no se puede man");
-      console.log("----------------------------------------");
+      dibujarGuiones(10);
   }
 });
